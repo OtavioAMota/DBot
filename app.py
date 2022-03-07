@@ -1,13 +1,9 @@
 import discord
 import os
 from dotenv import load_dotenv
-from neuralintents import GenericAssistant
+import learningBot.learn_bot
 
-chatbot = GenericAssistant('intents.json')
-print("bot learning...")
-chatbot.tran_model()
-chatbot.save_model()
-client = discord.Client()
+learn_bot('intents.json')
 
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
